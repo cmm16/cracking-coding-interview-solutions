@@ -1,0 +1,15 @@
+from src.linked_lists.link_list import Node
+
+
+def kth_to_last_element(node: Node, k: int) -> Node:
+    current_node = node
+    for i in range(k):
+        if current_node.next is not None:
+            current_node = node.next
+        return None
+    kth_to_last_node = node
+    while current_node.next is not None:
+        current_node = current_node.next
+        kth_to_last_node = kth_to_last_node.next
+
+    return kth_to_last_node
