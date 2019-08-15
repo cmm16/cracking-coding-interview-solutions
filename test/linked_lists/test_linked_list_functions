@@ -1,0 +1,19 @@
+from src.linked_lists.link_list import Node
+from src.linked_lists import two_one, two_three
+
+
+node1 = Node(0)
+node2 = Node(1)
+node3 = Node(2)
+node4 = Node(3)
+
+node1.next = node2
+node2.next = node3
+node3.next = node4
+
+
+def test_delete(node):
+    two_three.delete_middle_node(node)
+    print(node2.next.value)
+
+test_delete(node3)
